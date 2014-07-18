@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Added by Jason Newell -->
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdge.dll" />
+      <InputAssemblies Include="$(OutputPath)\Interop.RevisionManager.dll" />
+      <InputAssemblies Include="$(OutputPath)\Interop.SEInstallDataLib.dll" />
+      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgeAssembly.dll" />
+      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgeConstants.dll" />
+      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgeDraft.dll" />
+      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgeFileProperties.dll" />
+      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgeFramework.dll" />
+      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgeFrameworkSupport.dll" />
+      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgeGeometry.dll" />
+      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgePart.dll" />
+      <InputAssemblies Include="$(OutputPath)\Interop.StructureEditor.dll" />
+    </ItemGroup>
+
+    <!--Manually build the XML documentation for each Interop assembly.-->
+    <Message Text="Executing ..\GenerateInteropDocumentation\bin\Release\GenerateInteropDocumentation.exe &quot;$(TargetPath)&quot;" Importance="High" />
+    <Exec Command="..\GenerateInteropDocumentation\bin\Release\GenerateInteropDocumentation.exe &quot;$(TargetPath)&quot;"/>
+    
+    <!--Now merge all of the Interop assemblies into Interop.SolidEdge.dll-->
+    <!--https://github.com/peters/ILRepack.MSBuild.Task-->
+    <ILRepack Parallel="true" Internalize="false" InputAssemblies="@(InputAssemblies)" TargetKind="Dll" XmlDocumentation="true" OutputFile="$(OutputPath)\$(AssemblyName).dll" />
+  </Target>
+</Project>
