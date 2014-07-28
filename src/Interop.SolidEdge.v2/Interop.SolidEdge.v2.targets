@@ -2,27 +2,22 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <!-- Added by Jason Newell -->
   <Target Name="AfterBuild">
-    <ItemGroup>
-      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdge.dll" />
-      <InputAssemblies Include="$(OutputPath)\Interop.RevisionManager.dll" />
-      <InputAssemblies Include="$(OutputPath)\Interop.SEInstallDataLib.dll" />
-      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgeAssembly.dll" />
-      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgeConstants.dll" />
-      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgeDraft.dll" />
-      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgeFileProperties.dll" />
-      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgeFramework.dll" />
-      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgeFrameworkSupport.dll" />
-      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgeGeometry.dll" />
-      <InputAssemblies Include="$(OutputPath)\Interop.SolidEdgePart.dll" />
-      <InputAssemblies Include="$(OutputPath)\Interop.StructureEditor.dll" />
-    </ItemGroup>
+    <PropertyGroup>
+      <ILRepackExe>..\..\packages\ILRepack.1.25.0\tools\ILRepack.exe</ILRepackExe>
+      <ILRepackSwitches>/targetplatform:v2 /parallel /wildcards /xmldocs /verbose /out:"$(TargetDir)ILRepack\Interop.SolidEdge.dll"</ILRepackSwitches>
+      <ILRepackArgs>$(TargetDir)Interop.SolidEdge.dll $(TargetDir)Interop.RevisionManager.dll $(TargetDir)Interop.SEInstallDataLib.dll $(TargetDir)Interop.SolidEdgeAssembly.dll $(TargetDir)Interop.SolidEdgeConstants.dll $(TargetDir)Interop.SolidEdgeDraft.dll $(TargetDir)Interop.SolidEdgeFileProperties.dll $(TargetDir)Interop.SolidEdgeFramework.dll $(TargetDir)Interop.SolidEdgeFrameworkSupport.dll $(TargetDir)Interop.SolidEdgeGeometry.dll $(TargetDir)Interop.SolidEdgePart.dll $(TargetDir)Interop.StructureEditor.dll</ILRepackArgs>
+      <ILRepackCommand>$(ILRepackExe) $(ILRepackSwitches) $(ILRepackArgs)</ILRepackCommand>
+    </PropertyGroup>
 
     <!--Manually build the XML documentation for each Interop assembly.-->
     <Message Text="Executing ..\GenerateInteropDocumentation\bin\Release\GenerateInteropDocumentation.exe &quot;$(TargetPath)&quot;" Importance="High" />
     <Exec Command="..\GenerateInteropDocumentation\bin\Release\GenerateInteropDocumentation.exe &quot;$(TargetPath)&quot;"/>
-    
-    <!--Now merge all of the Interop assemblies into Interop.SolidEdge.dll-->
-    <!--https://github.com/peters/ILRepack.MSBuild.Task-->
-    <ILRepack Parallel="true" Internalize="false" InputAssemblies="@(InputAssemblies)" TargetKind="Dll" XmlDocumentation="true" OutputFile="$(OutputPath)\$(AssemblyName).dll" />
+
+    <!-- Create ILRepack directory. -->
+    <MakeDir Directories="$(TargetDir)ILRepack"/>
+
+    <!--Execute ILRepack-->
+    <Message Text="Executing: $(ILRepackCommand)" Importance="High" />
+    <Exec Command="$(ILRepackCommand)"/>
   </Target>
 </Project>
