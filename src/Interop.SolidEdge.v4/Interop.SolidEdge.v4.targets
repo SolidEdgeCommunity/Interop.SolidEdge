@@ -4,8 +4,8 @@
   <Target Name="AfterBuild">
     <PropertyGroup>
       <ILRepackExe>..\..\packages\ILRepack.1.25.0\tools\ILRepack.exe</ILRepackExe>
-      <ILRepackSwitches>/targetplatform:v4 /parallel /wildcards /xmldocs /verbose /out:"$(TargetDir)ILRepack\Interop.SolidEdge.dll"</ILRepackSwitches>
-      <ILRepackArgs>$(TargetDir)Interop.SolidEdge.dll $(TargetDir)Interop.RevisionManager.dll $(TargetDir)Interop.SEInstallDataLib.dll $(TargetDir)Interop.SolidEdgeAssembly.dll $(TargetDir)Interop.SolidEdgeConstants.dll $(TargetDir)Interop.SolidEdgeDraft.dll $(TargetDir)Interop.SolidEdgeFileProperties.dll $(TargetDir)Interop.SolidEdgeFramework.dll $(TargetDir)Interop.SolidEdgeFrameworkSupport.dll $(TargetDir)Interop.SolidEdgeGeometry.dll $(TargetDir)Interop.SolidEdgePart.dll $(TargetDir)Interop.StructureEditor.dll</ILRepackArgs>
+      <ILRepackSwitches>/targetplatform:v4 /parallel /wildcards /xmldocs /verbose /out:"$(TargetDir)ILRepack\$(TargetFileName)"</ILRepackSwitches>
+      <ILRepackArgs>$(TargetDir)$(TargetFileName) $(TargetDir)Interop.RevisionManager.dll $(TargetDir)Interop.SEInstallDataLib.dll $(TargetDir)Interop.SolidEdgeAssembly.dll $(TargetDir)Interop.SolidEdgeConstants.dll $(TargetDir)Interop.SolidEdgeDraft.dll $(TargetDir)Interop.SolidEdgeFileProperties.dll $(TargetDir)Interop.SolidEdgeFramework.dll $(TargetDir)Interop.SolidEdgeFrameworkSupport.dll $(TargetDir)Interop.SolidEdgeGeometry.dll $(TargetDir)Interop.SolidEdgePart.dll $(TargetDir)Interop.StructureEditor.dll</ILRepackArgs>
       <ILRepackCommand>$(ILRepackExe) $(ILRepackSwitches) $(ILRepackArgs)</ILRepackCommand>
     </PropertyGroup>
     
