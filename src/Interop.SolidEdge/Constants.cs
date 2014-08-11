@@ -43,6 +43,8 @@ namespace SolidEdge
         public const string SEDMPart = "D9B0BB85-3A6C-4086-A0BB-88A1AAD57A58";
         public const string SEDMSheetMetal = "9CBF2809-FF80-4dbc-98F2-B82DABF3530F";
         public const string SEDMAssembly = "2C3C2A72-3A4A-471d-98B5-E3A8CFA4A2BF";
+        public const string SESimplifiedAssemblyPart = "E7350DC3-6E7A-4D53-A53F-5B1C7A0709B3";
+        public const string Sketch3d = "07F05BA4-18CD-4B87-8E2F-49864E71B41F";
 
         public static readonly Guid SolidEdgeAddInGuid = new Guid(SolidEdgeAddIn);
         public static readonly Guid SEApplicationGuid = new Guid(SEApplication);
@@ -78,6 +80,8 @@ namespace SolidEdge
         public static readonly Guid SEDMPartGuid = new Guid(SEDMPart);
         public static readonly Guid SEDMSheetMetalGuid = new Guid(SEDMSheetMetal);
         public static readonly Guid SEDMAssemblyGuid = new Guid(SEDMAssembly);
+        public static readonly Guid SESimplifiedAssemblyPartGuid = new Guid(SESimplifiedAssemblyPart);
+        public static readonly Guid Sketch3dGuid = new Guid(Sketch3d);
     }
 
     /// <summary>

@@ -1,4 +1,4 @@
-﻿// Ported from C:\Program Files\Solid Edge ST6\SDK\Advanced\include\igl.h
+﻿// Ported from \sdk\include\igl.h
 
 using System;
 using System.Runtime.InteropServices;
