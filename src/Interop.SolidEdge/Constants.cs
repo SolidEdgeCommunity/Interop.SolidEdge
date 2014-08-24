@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidEdge
+namespace SolidEdgeSDK
 {
     /// <summary>
     /// Solid Edge category IDs imported from \sdk\include\secatids.h.
@@ -45,87 +45,301 @@ namespace SolidEdge
         public const string SEDMAssembly = "2C3C2A72-3A4A-471d-98B5-E3A8CFA4A2BF";
         public const string SESimplifiedAssemblyPart = "E7350DC3-6E7A-4D53-A53F-5B1C7A0709B3";
         public const string Sketch3d = "07F05BA4-18CD-4B87-8E2F-49864E71B41F";
-
-        public static readonly Guid SolidEdgeAddInGuid = new Guid(SolidEdgeAddIn);
-        public static readonly Guid SEApplicationGuid = new Guid(SEApplication);
-        public static readonly Guid SEAssemblyGuid = new Guid(SEAssembly);
-        public static readonly Guid SEMotionGuid = new Guid(SEMotion);
-        public static readonly Guid SEPartGuid = new Guid(SEPart);
-        public static readonly Guid SEProfileGuid = new Guid(SEProfile);
-        public static readonly Guid SEFeatureRecognitionGuid = new Guid(SEFeatureRecognition);
-        public static readonly Guid SESheetMetalGuid = new Guid(SESheetMetal);
-        public static readonly Guid SEDraftGuid = new Guid(SEDraft);
-        public static readonly Guid SEWeldmentGuid = new Guid(SEWeldment);
-        public static readonly Guid SEXpresRouteGuid = new Guid(SEXpresRoute);
-        public static readonly Guid SEExplodeGuid = new Guid(SEExplode);
-        public static readonly Guid SESimplifyGuid = new Guid(SESimplify);
-        public static readonly Guid SEStudioGuid = new Guid(SEStudio);
-        public static readonly Guid SELayoutGuid = new Guid(SELayout);
-        public static readonly Guid SESketchGuid = new Guid(SESketch);
-        public static readonly Guid SEProfileHoleGuid = new Guid(SEProfileHole);
-        public static readonly Guid SEProfilePatternGuid = new Guid(SEProfilePattern);
-        public static readonly Guid SEProfileRevolvedGuid = new Guid(SEProfileRevolved);
-        public static readonly Guid SEDrawingViewEditGuid = new Guid(SEDrawingViewEdit);
-        public static readonly Guid SERefAxisGuid = new Guid(SERefAxis);
-        public static readonly Guid SECuttingPlaneLineGuid = new Guid(SECuttingPlaneLine);
-        public static readonly Guid SEBrokenOutSectionProfileGuid = new Guid(SEBrokenOutSectionProfile);
-        public static readonly Guid SEFrameGuid = new Guid(SEFrame);
-        public static readonly Guid SE2dModelGuid = new Guid(SE2dModel);
-        public static readonly Guid SEEditBlockViewGuid = new Guid(SEEditBlockView);
-        public static readonly Guid SEComponentSketchInPartGuid = new Guid(SEComponentSketchInPart);
-        public static readonly Guid SEComponentSketchInAsmGuid = new Guid(SEComponentSketchInAsm);
-        public static readonly Guid SEHarnessGuid = new Guid(SEHarness);
-        public static readonly Guid SEAllGuid = new Guid(SEAll);
-        public static readonly Guid SEAllDocumentEnvrionmentsGuid = new Guid(SEAllDocumentEnvrionments);
-        public static readonly Guid SEDMPartGuid = new Guid(SEDMPart);
-        public static readonly Guid SEDMSheetMetalGuid = new Guid(SEDMSheetMetal);
-        public static readonly Guid SEDMAssemblyGuid = new Guid(SEDMAssembly);
-        public static readonly Guid SESimplifiedAssemblyPartGuid = new Guid(SESimplifiedAssemblyPart);
-        public static readonly Guid Sketch3dGuid = new Guid(Sketch3d);
     }
 
     /// <summary>
-    /// Solid Edge CLSIDs from registry.
+    /// Solid Edge Environment Categories
     /// </summary>
-    public static class CLSID
+    public static class EnvironmentCategories
     {
-        public const string SolidEdgeApplication = "DED89DB0-45B6-11CE-B307-0800363A1E02";
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEApplication"/>
+        /// </summary>
+        public static readonly Guid Application = new Guid(CATID.SEApplication);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEAssembly"/>
+        /// </summary>
+        public static readonly Guid Assembly = new Guid(CATID.SEAssembly);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEMotion"/>
+        /// </summary>
+        public static readonly Guid Motion = new Guid(CATID.SEMotion);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEPart"/>
+        /// </summary>
+        public static readonly Guid Part = new Guid(CATID.SEPart);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEProfile"/>
+        /// </summary>
+        public static readonly Guid Profile = new Guid(CATID.SEProfile);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEFeatureRecognition"/>
+        /// </summary>
+        public static readonly Guid FeatureRecognition = new Guid(CATID.SEFeatureRecognition);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SESheetMetal"/>
+        /// </summary>
+        public static readonly Guid SheetMetal = new Guid(CATID.SESheetMetal);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEDraft"/>
+        /// </summary>
+        public static readonly Guid Draft = new Guid(CATID.SEDraft);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEWeldment"/>
+        /// </summary>
+        public static readonly Guid Weldment = new Guid(CATID.SEWeldment);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEXpresRoute"/>
+        /// </summary>
+        public static readonly Guid XpresRoute = new Guid(CATID.SEXpresRoute);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEExplode"/>
+        /// </summary>
+        public static readonly Guid Explode = new Guid(CATID.SEExplode);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SESimplify"/>
+        /// </summary>
+        public static readonly Guid Simplify = new Guid(CATID.SESimplify);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEStudio"/>
+        /// </summary>
+        public static readonly Guid Studio = new Guid(CATID.SEStudio);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SELayout"/>
+        /// </summary>
+        public static readonly Guid Layout = new Guid(CATID.SELayout);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SESketch"/>
+        /// </summary>
+        public static readonly Guid Sketch = new Guid(CATID.SESketch);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEProfileHole"/>
+        /// </summary>
+        public static readonly Guid ProfileHole = new Guid(CATID.SEProfileHole);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEProfilePattern"/>
+        /// </summary>
+        public static readonly Guid ProfilePattern = new Guid(CATID.SEProfilePattern);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEProfileRevolved"/>
+        /// </summary>
+        public static readonly Guid ProfileRevolved = new Guid(CATID.SEProfileRevolved);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEDrawingViewEdit"/>
+        /// </summary>
+        public static readonly Guid DrawingViewEdit = new Guid(CATID.SEDrawingViewEdit);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SERefAxis"/>
+        /// </summary>
+        public static readonly Guid RefAxis = new Guid(CATID.SERefAxis);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SECuttingPlaneLine"/>
+        /// </summary>
+        public static readonly Guid CuttingPlaneLine = new Guid(CATID.SECuttingPlaneLine);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEBrokenOutSectionProfile"/>
+        /// </summary>
+        public static readonly Guid BrokenOutSectionProfile = new Guid(CATID.SEBrokenOutSectionProfile);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEFrame"/>
+        /// </summary>
+        public static readonly Guid Frame = new Guid(CATID.SEFrame);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SE2dModel"/>
+        /// </summary>
+        public static readonly Guid _2dModel = new Guid(CATID.SE2dModel);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEEditBlockView"/>
+        /// </summary>
+        public static readonly Guid EditBlockView = new Guid(CATID.SEEditBlockView);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEComponentSketchInPart"/>
+        /// </summary>
+        public static readonly Guid ComponentSketchInPart = new Guid(CATID.SEComponentSketchInPart);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEComponentSketchInAsm"/>
+        /// </summary>
+        public static readonly Guid ComponentSketchInAsm = new Guid(CATID.SEComponentSketchInAsm);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEHarness"/>
+        /// </summary>
+        public static readonly Guid Harness = new Guid(CATID.SEHarness);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEAll"/>
+        /// </summary>
+        public static readonly Guid All = new Guid(CATID.SEAll);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEAllDocumentEnvrionments"/>
+        /// </summary>
+        public static readonly Guid AllDocumentEnvrionments = new Guid(CATID.SEAllDocumentEnvrionments);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEDMPart"/>
+        /// </summary>
+        public static readonly Guid DMPart = new Guid(CATID.SEDMPart);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEDMSheetMetal"/>
+        /// </summary>
+        public static readonly Guid DMSheetMetal = new Guid(CATID.SEDMSheetMetal);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEDMAssembly"/>
+        /// </summary>
+        public static readonly Guid DMAssembly = new Guid(CATID.SEDMAssembly);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SESimplifiedAssemblyPart"/>
+        /// </summary>
+        public static readonly Guid SimplifiedAssemblyPart = new Guid(CATID.SESimplifiedAssemblyPart);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.Sketch3d"/>
+        /// </summary>
+        public static readonly Guid Sketch3d = new Guid(CATID.Sketch3d);
     }
+
+    ///// <summary>
+    ///// Solid Edge CLSIDs from registry.
+    ///// </summary>
+    //public static class CLSID
+    //{
+    //    /// <summary>
+    //    /// HKEY_CLASSES_ROOT\SolidEdge.Application\CLSID
+    //    /// </summary>
+    //    public const string SolidEdgeApplication = "DED89DB0-45B6-11CE-B307-0800363A1E02";
+
+    //    /// <summary>
+    //    /// HKEY_CLASSES_ROOT\SolidEdge.AssemblyDocument\CLSID
+    //    /// </summary>
+    //    public const string SolidEdgeAssemblyDocument = "00C6BF00-483B-11CE-951A-08003601BE52";
+
+    //    /// <summary>
+    //    /// HKEY_CLASSES_ROOT\SolidEdge.DraftDocument\CLSID
+    //    /// </summary>
+    //    public const string SolidEdgeDraftDocument = "016B11FB-CDC0-11CE-A035-08003601E53B";
+
+    //    /// <summary>
+    //    /// HKEY_CLASSES_ROOT\SolidEdge.FamilyOfAssembliesDocument\CLSID
+    //    /// </summary>
+    //    public const string SolidEdgeFamilyOfAssembliesDocument = "04D613A0-A322-40B5-A2A4-36CA0DE6F5D9";
+
+    //    /// <summary>
+    //    /// HKEY_CLASSES_ROOT\SolidEdge.FileProperties\CLSID
+    //    /// </summary>
+    //    public const string SolidEdgeFileProperties = "AED8FE60-3129-11D1-BC83-0800360E1E02";
+
+    //    /// <summary>
+    //    /// HKEY_CLASSES_ROOT\SolidEdge.InstallData\CLSID
+    //    /// </summary>
+    //    public const string SolidEdgeInstallData = "42E042A6-18A0-11D5-BBB2-00C04F79BEA5";
+    //}
+
     /// <summary>
     /// Solid Edge IIDs imported from \sdk\include\igl.h.
     /// </summary>
-    public static partial class IID
-    {
-        // IGL Interface IIDs
-        public const string IGL = "0002D280-0000-0000-C000-000000000046";
-        public const string IGLU = "0002D283-0000-0000-C000-000000000046";
-        public const string IWGL = "0002D282-0000-0000-C000-000000000046";
-        public const string IGLControl = "0002D281-0000-0000-C000-000000000046";
-        public const string IGLUControl = "0002D284-0000-0000-C000-000000000046";
-        public const string IGLExtension = "66EEE92E-5AB5-11D1-A266-08003654E902";
-        public const string IViewGLObject = "0002D201-0000-0000-C000-000000000046";
+    //public static partial class IID
+    //{
+    //    // IGL Interface IIDs
+    //    public const string IGL = "0002D280-0000-0000-C000-000000000046";
+    //    public const string IGLU = "0002D283-0000-0000-C000-000000000046";
+    //    public const string IWGL = "0002D282-0000-0000-C000-000000000046";
+    //    public const string IGLControl = "0002D281-0000-0000-C000-000000000046";
+    //    public const string IGLUControl = "0002D284-0000-0000-C000-000000000046";
+    //    public const string IGLExtension = "66EEE92E-5AB5-11D1-A266-08003654E902";
+    //    public const string IViewGLObject = "0002D201-0000-0000-C000-000000000046";
 
-        public static readonly Guid IGLGuid = new Guid(IGL);
-        public static readonly Guid IGLUGuid = new Guid(IGLU);
-        public static readonly Guid IWGLGuid = new Guid(IWGL);
-        public static readonly Guid IGLControlGuid = new Guid(IGLControl);
-        public static readonly Guid IGLUControlGuid = new Guid(IGLUControl);
-        public static readonly Guid IGLExtensionGuid = new Guid(IGLExtension);
-        public static readonly Guid IViewGLObjectGuid = new Guid(IViewGLObject);
-    }
+    //    public static readonly Guid IGLGuid = new Guid(IGL);
+    //    public static readonly Guid IGLUGuid = new Guid(IGLU);
+    //    public static readonly Guid IWGLGuid = new Guid(IWGL);
+    //    public static readonly Guid IGLControlGuid = new Guid(IGLControl);
+    //    public static readonly Guid IGLUControlGuid = new Guid(IGLUControl);
+    //    public static readonly Guid IGLExtensionGuid = new Guid(IGLExtension);
+    //    public static readonly Guid IViewGLObjectGuid = new Guid(IViewGLObject);
+    //}
 
     /// <summary>
     /// Solid Edge PROGIDs from registry.
     /// </summary>
     public static class PROGID
     {
-        public const string Application = "SolidEdge.Application";
-        public const string AssemblyDocument = "SolidEdge.AssemblyDocument";
-        public const string DraftDocument = "SolidEdge.DraftDocument";
-        public const string FileProperties = "SolidEdge.FileProperties";
-        public const string InstallData = "SolidEdge.InstallData";
-        public const string PartDocument = "SolidEdge.PartDocument";
-        public const string SheetMetalDocument = "SolidEdge.SheetMetalDocument";
-        public const string WeldmentDocument = "SolidEdge.WeldmentDocument";
+        /// <summary>
+        /// HKEY_CLASSES_ROOT\SolidEdge.Application
+        /// </summary>
+        public const string SolidEdge_Application = "SolidEdge.Application";
+
+        /// <summary>
+        /// HKEY_CLASSES_ROOT\SolidEdge.AssemblyDocument
+        /// </summary>
+        public const string SolidEdge_AssemblyDocument = "SolidEdge.AssemblyDocument";
+
+        /// <summary>
+        /// HKEY_CLASSES_ROOT\SolidEdge.DraftDocument
+        /// </summary>
+        public const string SolidEdge_DraftDocument = "SolidEdge.DraftDocument";
+
+        /// <summary>
+        /// HKEY_CLASSES_ROOT\SolidEdge.FamilyOfAssembliesDocument
+        /// </summary>
+        public const string SolidEdge_FamilyOfAssembliesDocument = "SolidEdge.FamilyOfAssembliesDocument";
+
+        /// <summary>
+        /// HKEY_CLASSES_ROOT\SolidEdge.FileProperties
+        /// </summary>
+        public const string SolidEdge_FileProperties = "SolidEdge.FileProperties";
+
+        /// <summary>
+        /// HKEY_CLASSES_ROOT\SolidEdge.InstallData
+        /// </summary>
+        public const string SolidEdge_InstallData = "SolidEdge.InstallData";
+
+        /// <summary>
+        /// HKEY_CLASSES_ROOT\SolidEdge.PartDocument
+        /// </summary>
+        public const string SolidEdge_PartDocument = "SolidEdge.PartDocument";
+
+        /// <summary>
+        /// HKEY_CLASSES_ROOT\RevisionManager.Application
+        /// </summary>
+        public const string RevisionManager_Application = "RevisionManager.Application";
+
+        /// <summary>
+        /// HKEY_CLASSES_ROOT\SolidEdge.SheetMetalDocument
+        /// </summary>
+        public const string SolidEdge_SheetMetalDocument = "SolidEdge.SheetMetalDocument";
+
+        /// <summary>
+        /// HKEY_CLASSES_ROOT\SolidEdge.WeldmentDocument
+        /// </summary>
+        public const string SolidEdge_WeldmentDocument = "SolidEdge.WeldmentDocument";
     }
 }

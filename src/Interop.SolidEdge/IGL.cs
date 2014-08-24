@@ -3,7 +3,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace SolidEdge
+namespace SolidEdgeSDK
 {
     /// <summary>
     /// IGL Graphics Library Interface
