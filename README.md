@@ -1,5 +1,11 @@
 Interop.SolidEdge
 ================
+
+### Latest Releases
+|Library           |Version           |Downloads         |
+|:-----------------|:-----------------|:-----------------|
+|**Interop.SolidEdge**|[![Nuget count](http://img.shields.io/nuget/v/Interop.SolidEdge.svg)](https://www.nuget.org/packages/Interop.SolidEdge/)|[![Nuget downloads](http://img.shields.io/nuget/dt/Interop.SolidEdge.svg)](https://www.nuget.org/packages/Interop.SolidEdge/)|
+
 This repository contains community contributed libraries for the Solid Edge API.
 
 * [Overview](https://github.com/SolidEdgeCommunity/CommunityFramework/wiki/Interop.SolidEdge#overview)
