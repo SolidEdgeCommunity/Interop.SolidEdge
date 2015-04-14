@@ -6,14 +6,6 @@ Interop.SolidEdge
 |:-----------------|:-----------------|:-----------------|
 |**Interop.SolidEdge**|[![Nuget count](http://img.shields.io/nuget/v/Interop.SolidEdge.svg)](https://www.nuget.org/packages/Interop.SolidEdge/)|[![Nuget downloads](http://img.shields.io/nuget/dt/Interop.SolidEdge.svg)](https://www.nuget.org/packages/Interop.SolidEdge/)|
 
-This repository contains community contributed libraries for the Solid Edge API.
-
-* [Overview](https://github.com/SolidEdgeCommunity/CommunityFramework/wiki/Interop.SolidEdge#overview)
-* [NuGet Package] (https://github.com/SolidEdgeCommunity/CommunityFramework/wiki/Interop.SolidEdge#nuget-package)
-* [Installation](https://github.com/SolidEdgeCommunity/CommunityFramework/wiki/Interop.SolidEdge#installation)
-* [Updates](https://github.com/SolidEdgeCommunity/CommunityFramework/wiki/Interop.SolidEdge#updates)
-* [Versioning](https://github.com/SolidEdgeCommunity/CommunityFramework/wiki/Interop.SolidEdge#versioning)
-
 # Overview
 A single Interop Assembly containing all relevant Solid Edge API definitions. The compiled binaries are hosted at NuGet in package id [Interop.SolidEdge](https://www.nuget.org/packages/Interop.SolidEdge).
 
