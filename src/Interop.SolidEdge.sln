@@ -1,18 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.SolidEdge", "src\Interop.SolidEdge\Interop.SolidEdge.csproj", "{96848F2B-9D1F-4926-87B9-A57B27160F2B}"
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.SolidEdge", "Interop.SolidEdge\Interop.SolidEdge.csproj", "{96848F2B-9D1F-4926-87B9-A57B27160F2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.SolidEdge.v2", "src\Interop.SolidEdge.v2\Interop.SolidEdge.v2.csproj", "{7BD713D3-6CB2-412C-A0AC-E0D19F7A26E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.SolidEdge.v2", "Interop.SolidEdge.v2\Interop.SolidEdge.v2.csproj", "{7BD713D3-6CB2-412C-A0AC-E0D19F7A26E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.SolidEdge.v4", "src\Interop.SolidEdge.v4\Interop.SolidEdge.v4.csproj", "{0BC094CD-940D-4FE0-A83F-876B1232E70C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.SolidEdge.v4", "Interop.SolidEdge.v4\Interop.SolidEdge.v4.csproj", "{0BC094CD-940D-4FE0-A83F-876B1232E70C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateInteropDocumentation", "src\GenerateInteropDocumentation\GenerateInteropDocumentation.csproj", "{DC3F2A93-E81E-479F-BCCA-FE1F1F04348B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateInteropDocumentation", "GenerateInteropDocumentation\GenerateInteropDocumentation.csproj", "{DC3F2A93-E81E-479F-BCCA-FE1F1F04348B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{963B6117-89BF-4FB8-846D-08D055886FDB}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\packages.config = .nuget\packages.config
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.SolidEdge.v45", "Interop.SolidEdge.v45\Interop.SolidEdge.v45.csproj", "{D5F81C1F-388A-4AB6-9452-E41C33D15E1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +33,10 @@ Global
 		{DC3F2A93-E81E-479F-BCCA-FE1F1F04348B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC3F2A93-E81E-479F-BCCA-FE1F1F04348B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC3F2A93-E81E-479F-BCCA-FE1F1F04348B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5F81C1F-388A-4AB6-9452-E41C33D15E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5F81C1F-388A-4AB6-9452-E41C33D15E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5F81C1F-388A-4AB6-9452-E41C33D15E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5F81C1F-388A-4AB6-9452-E41C33D15E1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -50,9 +50,6 @@
     <Compile Include="..\Interop.SolidEdge\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="..\Interop.SolidEdge\SolidEdgeFramework\ApplicationClass.cs">
-      <Link>SolidEdgeFramework\ApplicationClass.cs</Link>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="RevisionManager">
@@ -159,6 +156,7 @@
     <None Include="Interop.SolidEdge.v4.targets">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
