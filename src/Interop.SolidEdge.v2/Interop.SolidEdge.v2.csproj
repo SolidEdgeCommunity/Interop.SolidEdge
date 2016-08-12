@@ -47,6 +47,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="InsightConnect">
+      <Guid>{0E6AA0AE-9E97-4440-B6E0-41E3FF654FFE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+    </COMReference>
     <COMReference Include="RevisionManager">
       <Guid>{DF778D1A-0AA4-11D1-BC6E-0800360E1E02}</Guid>
       <VersionMajor>1</VersionMajor>
