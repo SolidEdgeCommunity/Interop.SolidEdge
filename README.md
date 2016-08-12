@@ -22,6 +22,7 @@ A single Interop Assembly containing all relevant Solid Edge API definitions. Th
 | Solid Edge Geometry Type Library | geometry.tlb | SolidEdgeGeometry |
 | Solid Edge Part Type Library | Part.tlb | SolidEdgePart |
 | Solid Edge Structure Editor Object Library | StructureEditor.tlb | StructureEditor |
+| Solid Edge View And Markup Object Library | iCnct.tlb | InsightConnect
 
 # NuGet Package
 The Interop.SolidEdge assembly is published as a [NuGet](https://www.nuget.org/) package. The package id is [Interop.SolidEdge](https://www.nuget.org/packages/Interop.SolidEdge). The package includes .NET 2.0 & 4.0 builds of the assembly. Depending on your project settings, NuGet will reference the appropriate assembly.
