@@ -45,6 +45,12 @@ namespace SolidEdgeSDK
         public const string SEDMAssembly = "2C3C2A72-3A4A-471d-98B5-E3A8CFA4A2BF";
         public const string SESimplifiedAssemblyPart = "E7350DC3-6E7A-4D53-A53F-5B1C7A0709B3";
         public const string Sketch3d = "07F05BA4-18CD-4B87-8E2F-49864E71B41F";
+        public const string EditBlockInPlace = "308A1927-CDCE-4b92-B654-241362608CDE";
+        public const string SEEditMV = "C1D8CCB8-54D3-4fce-92AB-0668147FC7C3";
+        public const string SEEditMVPart = "054BDB42-6C1E-41a4-9014-3D51BEE911EF";
+        public const string FEAResultsPart = "B5965D1C-8819-4902-8252-64841537A16C";
+        public const string FEAResultsAsm = "986B2512-3AE9-4a57-8513-1D2A1E3520DD";
+        
     }
 
     /// <summary>
@@ -226,6 +232,31 @@ namespace SolidEdgeSDK
         /// Guid constant for <see cref="SolidEdgeSDK.CATID.Sketch3d"/>
         /// </summary>
         public static readonly Guid Sketch3d = new Guid(CATID.Sketch3d);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.EditBlockInPlace"/>
+        /// </summary>
+        public static readonly Guid EditBlockInPlace = new Guid(CATID.EditBlockInPlace);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEEditMV"/>
+        /// </summary>
+        public static readonly Guid SEEditMV = new Guid(CATID.SEEditMV);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEEditMVPart"/>
+        /// </summary>
+        public static readonly Guid SEEditMVPart = new Guid(CATID.SEEditMVPart);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.FEAResultsPart"/>
+        /// </summary>
+        public static readonly Guid FEAResultsPart = new Guid(CATID.FEAResultsPart);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.FEAResultsAsm"/>
+        /// </summary>
+        public static readonly Guid FEAResultsAsm = new Guid(CATID.FEAResultsAsm);
     }
 
     ///// <summary>
