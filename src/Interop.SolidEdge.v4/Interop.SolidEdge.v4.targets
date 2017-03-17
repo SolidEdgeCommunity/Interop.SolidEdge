@@ -3,15 +3,15 @@
   <!-- Added by Jason Newell -->
   <Target Name="AfterBuild">
     <PropertyGroup>
-      <ILRepackExe>..\packages\ILRepack.2.0.5\tools\ILRepack.exe</ILRepackExe>
+      <ILRepackExe>..\packages\ILRepack.2.0.12\tools\ILRepack.exe</ILRepackExe>
       <ILRepackSwitches>/targetplatform:v4 /parallel /wildcards /xmldocs /verbose /out:"$(TargetDir)ILRepack\$(TargetFileName)"</ILRepackSwitches>
       <ILRepackArgs>$(TargetDir)$(TargetFileName) $(TargetDir)Interop.RevisionManager.dll $(TargetDir)Interop.SEInstallDataLib.dll $(TargetDir)Interop.SolidEdgeAssembly.dll $(TargetDir)Interop.SolidEdgeConstants.dll $(TargetDir)Interop.SolidEdgeDraft.dll $(TargetDir)Interop.SolidEdgeFileProperties.dll $(TargetDir)Interop.SolidEdgeFramework.dll $(TargetDir)Interop.SolidEdgeFrameworkSupport.dll $(TargetDir)Interop.SolidEdgeGeometry.dll $(TargetDir)Interop.SolidEdgePart.dll $(TargetDir)Interop.StructureEditor.dll $(TargetDir)Interop.InsightConnect.dll</ILRepackArgs>
       <ILRepackCommand>$(ILRepackExe) $(ILRepackSwitches) $(ILRepackArgs)</ILRepackCommand>
     </PropertyGroup>
     
     <!--Manually build the XML documentation for each Interop assembly.-->
-    <Message Text="Executing ..\GenerateInteropDocumentation\bin\Release\GenerateInteropDocumentation.exe &quot;$(TargetPath)&quot;" Importance="High" />
-    <Exec Command="..\GenerateInteropDocumentation\bin\Release\GenerateInteropDocumentation.exe &quot;$(TargetPath)&quot;"/>
+    <Message Text="Executing ..\GenerateXmlDocumentation\bin\Release\GenerateXmlDocumentation.exe &quot;$(TargetPath)&quot;" Importance="High" />
+    <Exec Command="..\GenerateXmlDocumentation\bin\Release\GenerateXmlDocumentation.exe &quot;$(TargetPath)&quot;"/>
     
     <!-- Create ILRepack directory. -->
     <MakeDir Directories="$(TargetDir)ILRepack"/>

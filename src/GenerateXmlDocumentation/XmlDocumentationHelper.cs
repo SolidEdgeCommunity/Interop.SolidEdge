@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace GenerateInteropDocumentation
+namespace GenerateXmlDocumentation
 {
     abstract class XmlDocumentationHelper
     {

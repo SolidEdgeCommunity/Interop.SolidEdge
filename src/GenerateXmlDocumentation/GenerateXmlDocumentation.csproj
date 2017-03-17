@@ -7,8 +7,8 @@
     <ProjectGuid>{DC3F2A93-E81E-479F-BCCA-FE1F1F04348B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GenerateInteropDocumentation</RootNamespace>
-    <AssemblyName>GenerateInteropDocumentation</AssemblyName>
+    <RootNamespace>GenerateXmlDocumentation</RootNamespace>
+    <AssemblyName>GenerateXmlDocumentation</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
