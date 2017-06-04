@@ -57,3 +57,6 @@ Starting with [Interop.SolidEdge 106.7.0](https://www.nuget.org/packages/Interop
 | Solid Edge ST6 MP7 | **106**.0.**7**.5 | [**106.7**.0](https://www.nuget.org/packages/Interop.SolidEdge/106.7.0) |
 | Solid Edge ST6 MP8 | **106**.0.**8**.? | **106.8**.0 |
 | Solid Edge ST7  | **107**.0.**0**.? | **107.0**.0 |
+| Solid Edge ST8  | **108**.0.**0**.? | **108.0**.0 |
+| Solid Edge ST9  | **109**.0.**0**.? | **109.0**.0 |
+| Solid Edge ST10  | **110**.0.**0**.? | **110.0**.0 |
