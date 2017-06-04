@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.SolidEdge", "Interop.SolidEdge\Interop.SolidEdge.csproj", "{96848F2B-9D1F-4926-87B9-A57B27160F2B}"
 	ProjectSection(ProjectDependencies) = postProject
