@@ -38,4 +38,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("109.0.0.0")]
 
 // This version should match the NuGet version.
-[assembly: AssemblyFileVersion("109.6.0.0")]
+[assembly: AssemblyFileVersion("109.7.0.0")]
