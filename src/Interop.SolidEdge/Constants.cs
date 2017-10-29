@@ -9,48 +9,215 @@ namespace SolidEdgeSDK
     /// </summary>
     public static class CATID
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SolidEdgeAddIn = "26B1D2D1-2B03-11d2-B589-080036E8B802";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEApplication = "26618394-09D6-11d1-BA07-080036230602";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEAssembly = "26618395-09D6-11d1-BA07-080036230602";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEMotion = "67ED3F40-A351-11d3-A40B-0004AC969602";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEPart = "26618396-09D6-11d1-BA07-080036230602";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEProfile = "26618397-09D6-11d1-BA07-080036230602";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEFeatureRecognition = "E6F9C8DC-B256-11d3-A41E-0004AC969602";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SESheetMetal = "26618398-09D6-11D1-BA07-080036230602";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEDraft = "08244193-B78D-11D2-9216-00C04F79BE98";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEWeldment = "7313526A-276F-11D4-B64E-00C04F79B2BF";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEXpresRoute = "1661432A-489C-4714-B1B2-61E85CFD0B71";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEExplode = "23BE4212-5810-478b-94FF-B4D682C1B538";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SESimplify = "CE3DCEBF-E36E-4851-930A-ED892FE0772A";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEStudio = "D35550BF-0810-4f67-97D5-789EDBC23F4D";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SELayout = "27B34941-FFCD-4768-9102-0B6698656CEA";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SESketch = "0DDABC90-125E-4cfe-9CB7-DC97FB74CCF4";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEProfileHole = "0D5CC5F7-5BA3-4d2f-B6A9-31D9B401FE30";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEProfilePattern = "7BD57D4B-BA47-4a79-A4E2-DFFD43B97ADF";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEProfileRevolved = "FB73C683-1536-4073-B792-E28B8D31146E";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEDrawingViewEdit = "8DBC3B5F-02D6-4241-BE96-B12EAF83FAE6";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SERefAxis = "B21CCFF8-1FDD-4f44-9417-F1EAE06888FA";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SECuttingPlaneLine = "7C6F65F1-A02D-4c3c-8063-8F54B59B34E3";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEBrokenOutSectionProfile = "534CAB66-8089-4e18-8FC4-6FA5A957E445";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEFrame = "D84119E8-F844-4823-B3A0-D4F31793028A";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SE2dModel = "F6031120-7D99-48a7-95FC-EEE8038D7996";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEEditBlockView = "892A1CDA-12AE-4619-BB69-C5156C929832";
-        public const string SEComponentSketchInPart = "FAB8DC23-00F4-4872-8662-18DD013F2095";
-        public const string SEComponentSketchInAsm = "86D925FB-66ED-40d2-AA3D-D04E74838141";
-        public const string SEHarness = "5337A0AB-23ED-4261-A238-00E2070406FC";
-        public const string SEAll = "C484ED57-DBB6-4a83-BEDB-C08600AF07BF";
-        public const string SEAllDocumentEnvrionments = "BAD41B8D-18FF-42c9-9611-8A00E6921AE8";
-        public const string SEDMPart = "D9B0BB85-3A6C-4086-A0BB-88A1AAD57A58";
-        public const string SEDMSheetMetal = "9CBF2809-FF80-4dbc-98F2-B82DABF3530F";
-        public const string SEDMAssembly = "2C3C2A72-3A4A-471d-98B5-E3A8CFA4A2BF";
-        public const string SESimplifiedAssemblyPart = "E7350DC3-6E7A-4D53-A53F-5B1C7A0709B3";
-        public const string Sketch3d = "07F05BA4-18CD-4B87-8E2F-49864E71B41F";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string EditBlockInPlace = "308A1927-CDCE-4b92-B654-241362608CDE";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public const string SEComponentSketchInPart = "FAB8DC23-00F4-4872-8662-18DD013F2095";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public const string SEComponentSketchInAsm = "86D925FB-66ED-40d2-AA3D-D04E74838141";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public const string SEHarness = "5337A0AB-23ED-4261-A238-00E2070406FC";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public const string SEAll = "C484ED57-DBB6-4a83-BEDB-C08600AF07BF";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public const string SEAllDocumentEnvrionments = "BAD41B8D-18FF-42c9-9611-8A00E6921AE8";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEEditMV = "C1D8CCB8-54D3-4fce-92AB-0668147FC7C3";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string SEEditMVPart = "054BDB42-6C1E-41a4-9014-3D51BEE911EF";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public const string SEDMPart = "D9B0BB85-3A6C-4086-A0BB-88A1AAD57A58";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public const string SEDMSheetMetal = "9CBF2809-FF80-4dbc-98F2-B82DABF3530F";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public const string SEDMAssembly = "2C3C2A72-3A4A-471d-98B5-E3A8CFA4A2BF";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string FEAResultsPart = "B5965D1C-8819-4902-8252-64841537A16C";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public const string FEAResultsAsm = "986B2512-3AE9-4a57-8513-1D2A1E3520DD";
-        
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public const string SESimplifiedAssemblyPart = "E7350DC3-6E7A-4D53-A53F-5B1C7A0709B3";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public const string Sketch3d = "07F05BA4-18CD-4B87-8E2F-49864E71B41F";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public const string SEAssemblyViewer = "F2483121-58BC-44AF-8B8F-D7B74DC8408B";
     }
 
     /// <summary>
@@ -257,6 +424,11 @@ namespace SolidEdgeSDK
         /// Guid constant for <see cref="SolidEdgeSDK.CATID.FEAResultsAsm"/>
         /// </summary>
         public static readonly Guid FEAResultsAsm = new Guid(CATID.FEAResultsAsm);
+
+        /// <summary>
+        /// Guid constant for <see cref="SolidEdgeSDK.CATID.SEAssemblyViewer"/>
+        /// </summary>
+        public static readonly Guid SEAssemblyViewer = new Guid(CATID.SEAssemblyViewer);
     }
 
     ///// <summary>

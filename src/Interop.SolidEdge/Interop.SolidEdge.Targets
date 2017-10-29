@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!-- Disable PDB output-->
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Interop.SolidEdge.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <!-- MyAfterClean gets called for each target framework. -->
+  <Target Name="MyAfterClean" AfterTargets="Clean" Condition="'$(TargetDir)'!=''">
+    <Message Text="AfterClean: $(TargetDir)" Importance="High" />
+
+    <ItemGroup>
+      <!-- Cleanup TargetDir. -->
+      <TargetDirFiles Include="$(TargetDir)*.dll;$(TargetDir)*.xml" />
+    </ItemGroup>
+
+    <Delete Files="@(TargetDirFiles)" />
+
+    <!-- Remove ILRepack temporary folder. -->
+    <RemoveDir Directories="$(TargetDir)ILRepack" />
+
+  </Target>
+
+  <!-- MyPostBuild gets called for each target framework. -->
+  <Target Name="MyPostBuild" AfterTargets="PostBuildEvent" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Message Text="------------------ Begin PostBuild - $(TargetFramework) ------------------" Importance="High" />
+
+    <!-- Manually build the XML documentation for each Interop assembly. -->
+    <CallTarget Targets="GenerateInteropXmlDocumentation"/>
+
+    <!-- Start the ILRepack process. -->
+    <CallTarget Targets="ExecuteILRepack"/>
+    <Message Text="------------------- End PostBuild - $(TargetFramework) -------------------" Importance="High" />
+  </Target>
+
+  <Target Name="GenerateInteropXmlDocumentation" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PropertyGroup>
+      <GenerateXmlDocumentationCommand>$(SolutionDir)\GenerateXmlDocumentation\bin\$(Configuration)\GenerateXmlDocumentation.exe "$(TargetPath)"</GenerateXmlDocumentationCommand>
+    </PropertyGroup>
+
+    <Message Text="Executing: $(GenerateXmlDocumentationCommand)" Importance="High" />
+    <Exec Command=" $(GenerateXmlDocumentationCommand)" />
+  </Target>
+
+  <Target Name="ExecuteILRepack" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PropertyGroup Condition="'$(TargetFramework)'=='net20'">
+      <ILRepackTargetPlatform>v2</ILRepackTargetPlatform>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(TargetFramework)'=='net40'">
+      <ILRepackTargetPlatform>v4</ILRepackTargetPlatform>
+    </PropertyGroup>
+
+    <PropertyGroup>
+      <ILRepackDir>$(TargetDir)ILRepack\</ILRepackDir>
+      <ILRepackSwitches>/targetplatform:$(ILRepackTargetPlatform) /parallel /wildcards /xmldocs /out:"$(ILRepackDir)$(TargetFileName)"</ILRepackSwitches>
+      <ILRepackArgs>$(TargetDir)$(TargetFileName) @(COMReference->'$(TargetDir)Interop.%(Identity)', ' ')</ILRepackArgs>
+      <ILRepackCommand>$(ILRepack) $(ILRepackSwitches) $(ILRepackArgs)</ILRepackCommand>
+    </PropertyGroup>
+
+    <!-- Recreate ILRepack directory. Sanity check... -->
+    <RemoveDir Directories="$(ILRepackDir)" />
+    <MakeDir Directories="$(ILRepackDir)" />
+
+    <!-- Execute ilrepack.exe -->
+    <Message Text="Executing: $(ILRepackCommand)" Importance="High" />
+    <Exec Command="$(ILRepackCommand)" />
+
+    <!-- Move MSBUILD generated Interop.SolidEdge.(dll|xml) to Interop.SolidEdge.Build.(dll|xml) -->
+    <Move SourceFiles="$(TargetDir)$(AssemblyName).dll" DestinationFiles="$(TargetDir)$(AssemblyName).Build.dll" />
+    <Move SourceFiles="$(TargetDir)$(AssemblyName).xml" DestinationFiles="$(TargetDir)$(AssemblyName).Build.xml" />
+
+    <ItemGroup>
+      <ILRepackeFiles Include="$(ILRepackDir)*.dll;$(ILRepackDir)*.xml"/>
+    </ItemGroup>
+
+    <!-- Move ILRepack generated Interop.SolidEdge.(dll|xml) to $(TargetDir) -->
+    <Copy SourceFiles="@(ILRepackeFiles)" DestinationFolder="$(TargetDir)" />
+  </Target>
+</Project>
