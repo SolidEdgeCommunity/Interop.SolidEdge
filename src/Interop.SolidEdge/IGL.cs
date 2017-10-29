@@ -2157,9 +2157,6 @@ namespace SolidEdgeSDK
         int SwapBuffers(IntPtr hdc);
     }
 
-    /// <summary>
-    /// IGLU Graphics Library Utility Interface
-    /// </summary>
     //[ComImport]
     //[Guid(IID.IID_IGLU)]
     //[InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]

@@ -467,9 +467,6 @@ namespace SolidEdgeSDK
     //    public const string SolidEdgeInstallData = "42E042A6-18A0-11D5-BBB2-00C04F79BEA5";
     //}
 
-    /// <summary>
-    /// Solid Edge IIDs imported from \sdk\include\igl.h.
-    /// </summary>
     //public static partial class IID
     //{
     //    // IGL Interface IIDs
