@@ -28,14 +28,11 @@
 
   <!-- MyPostBuild gets called for each target framework. -->
   <Target Name="MyPostBuild" AfterTargets="PostBuildEvent" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <Message Text="------------------ Begin PostBuild - $(TargetFramework) ------------------" Importance="High" />
-
     <!-- Manually build the XML documentation for each Interop assembly. -->
     <CallTarget Targets="GenerateInteropXmlDocumentation"/>
 
     <!-- Start the ILRepack process. -->
     <CallTarget Targets="ExecuteILRepack"/>
-    <Message Text="------------------- End PostBuild - $(TargetFramework) -------------------" Importance="High" />
   </Target>
 
   <Target Name="GenerateInteropXmlDocumentation" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -48,14 +45,16 @@
   </Target>
 
   <Target Name="ExecuteILRepack" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <PropertyGroup Condition="'$(TargetFramework)'=='net20'">
+    <PropertyGroup Condition="'$(TargetFramework)'=='NET20'">
       <ILRepackTargetPlatform>v2</ILRepackTargetPlatform>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(TargetFramework)'=='net40'">
+    <PropertyGroup Condition="'$(TargetFramework)'=='NET40'">
       <ILRepackTargetPlatform>v4</ILRepackTargetPlatform>
     </PropertyGroup>
 
+    <Error Condition="'$(ILRepackTargetPlatform)'==''" Text="TargetFramework '$(TargetFramework)' is not supported in this custom build task." />
+    
     <PropertyGroup>
       <ILRepackDir>$(TargetDir)ILRepack\</ILRepackDir>
       <ILRepackSwitches>/targetplatform:$(ILRepackTargetPlatform) /parallel /wildcards /xmldocs /out:"$(ILRepackDir)$(TargetFileName)"</ILRepackSwitches>
