@@ -53,6 +53,10 @@
       <ILRepackTargetPlatform>v4</ILRepackTargetPlatform>
     </PropertyGroup>
 
+    <PropertyGroup Condition="'$(TargetFramework)'=='NET45'">
+      <ILRepackTargetPlatform>v4</ILRepackTargetPlatform>
+    </PropertyGroup>
+    
     <Error Condition="'$(ILRepackTargetPlatform)'==''" Text="TargetFramework '$(TargetFramework)' is not supported in this custom build task." />
     
     <PropertyGroup>
@@ -80,5 +84,7 @@
 
     <!-- Move ILRepack generated Interop.SolidEdge.(dll|xml) to $(TargetDir) -->
     <Copy SourceFiles="@(ILRepackeFiles)" DestinationFolder="$(TargetDir)" />
+
+    <RemoveDir Directories="$(ILRepackDir)" />
   </Target>
 </Project>

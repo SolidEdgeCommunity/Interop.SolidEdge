@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>NET20;NET40</TargetFrameworks>
+    <TargetFrameworks>NET45;NET40</TargetFrameworks>
     <AppDesignerFolder>Properties</AppDesignerFolder>
   </PropertyGroup>
 
@@ -86,23 +86,32 @@
       <Lcid>0</Lcid>
       <Isolated>false</Isolated>
     </COMReference>
+    <COMReference Include="DesignManager.dll">
+      <Guid>427c71bd-b200-4421-ab49-12da610b369e</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>false</Isolated>
+    </COMReference>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ILRepack" Version="2.0.13" />
     <!-- marks all packages as 'local only' so they don't end up in the nuspec -->
     <PackageReference Update="@(PackageReference)" PrivateAssets="All" />
+    <PackageReference Update="ILRepack" Version="2.0.16" />
   </ItemGroup>
 
   <PropertyGroup>
-    <AssemblyVersion>110.0.0.0</AssemblyVersion>
-    <FileVersion>110.0.0.0</FileVersion>
-    <Version>110.0.0</Version>
+    <AssemblyVersion>219.0.0.0</AssemblyVersion>
+    <FileVersion>219.2.0.0</FileVersion>
+    <Version>219.2.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Jason Newell</Authors>
     <Company />
     <Description>A single Interop Assembly containing all relevant Solid Edge API definitions.</Description>
-    <PackageReleaseNotes>Updated to Solid Edge ST10.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated to Solid Edge 2019 MP2.</PackageReleaseNotes>
     <PackageId>Interop.SolidEdge</PackageId>
     <PackageIconUrl>https://raw.githubusercontent.com/SolidEdgeCommunity/Interop.SolidEdge/master/media/icon.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/SolidEdgeCommunity/Interop.SolidEdge</PackageProjectUrl>
