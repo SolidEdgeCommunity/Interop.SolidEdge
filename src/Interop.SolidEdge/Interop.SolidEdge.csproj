@@ -104,14 +104,14 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <AssemblyVersion>219.0.0.0</AssemblyVersion>
-    <FileVersion>219.10.0.0</FileVersion>
-    <Version>219.10.0</Version>
+    <AssemblyVersion>220.0.0.0</AssemblyVersion>
+    <FileVersion>220.2.0.0</FileVersion>
+    <Version>220.2.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Jason Newell</Authors>
     <Company />
     <Description>A single Interop Assembly containing all relevant Solid Edge API definitions.</Description>
-    <PackageReleaseNotes>Updated to Solid Edge 2019 MP10.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated to Solid Edge 2020 MP2.</PackageReleaseNotes>
     <PackageId>Interop.SolidEdge</PackageId>
     <PackageIconUrl>https://raw.githubusercontent.com/SolidEdgeCommunity/Interop.SolidEdge/master/media/icon.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/SolidEdgeCommunity/Interop.SolidEdge</PackageProjectUrl>
